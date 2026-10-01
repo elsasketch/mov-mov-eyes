@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: white;
+}
+
+.face {
+  width: min(1200px, 95vw);
+}
+
+#svg-container {
+  width: 100%;
+}
+
+#svg-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#left-pupil,
+#right-pupil {
+  will-change: transform;
+}
+/* =========================
+   第一頁：封面
+========================= */
+
+#cover-page {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 100;
+}
+
+/* 封面 SVG */
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* =========================
+   透明箭頭按鈕
+========================= */
+
+#enter-btn {
+  position: absolute;
+
+  /* 箭頭在右下角 */
+  right: 6%;
+  bottom: 7%;
+
+  /* 可以依你的箭頭大小調整 */
+  width: 300px;
+  height: 100px;
+
+  /* 完全透明 */
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+/* =========================
+   第二頁：眼睛
+========================= */
+
+#eye-page {
+  display: none;
+
+  width: 100%;
+  min-height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* 點箭頭之後顯示 */
+
+#eye-page.active {
+  display: flex;
+}
